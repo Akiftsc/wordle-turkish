@@ -1,0 +1,98 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  /* background: #bdb9b9; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  height: 480px;
+  width: 480px;
+}
+
+.grid .row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+
+.grid .row .cell {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #000;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+}
+
+.cell.rightPlace {
+  background: #4CCD99;
+}
+
+.cell.rightLetter {
+  background: #DBA979;
+}
+
+.row.win .cell {
+  background: #4CCD99;
+}
+
+#reset {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
